@@ -18,7 +18,6 @@ def add_contact():
     name = input("Enter the contact´s name: ")
     email = input("Enter the contact´s email: ")
     phone = input("Enter the contact´s phone number: ")
-    # creamos un diccionario usando la información de arriba
     contact = {"Name": name, "Email": email, "Phone": phone}
     contacts.append(contact)
     print("Contact added successfully!")
