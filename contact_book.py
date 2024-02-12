@@ -87,3 +87,30 @@ def display_all_contacts():
             print("========================")
     else:
         print("No contact found")
+        
+# Step7: The Driver Loop(Bucle del conductor):-> Main program to choice
+
+while True:
+ 
+    #funcion al comienzo del código
+    display_menu()
+    choice= input("Enter your choice(1-6)")
+    
+    if choice == "1":
+        add_contact()
+    elif choice == "2":
+        search_contact()
+    elif choice == "3":
+        update_contact()
+    elif choice == "4":
+        delete_contact()
+    elif choice == "5":
+        display_all_contacts()
+    elif choice == "6":
+        print("Exiting the program...")
+        break
+        
+    else:
+        print("Invalid choice. Please enter a valid option (1-6).")
+
+    
