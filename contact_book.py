@@ -40,4 +40,22 @@ def search_contact():
     else:
         print("No matching contacts found.")
     
-#
+    
+#Step4: Update function:
+
+def update_contact():
+    name= input("Enter the name of the contact to update: ")
+    found_contact= None 
+    for contact in contacts:
+        if contact["Name"].lower() == name.lower():
+            found_contact= contact 
+            break 
+        
+    if found_contact: 
+        print("Contact found. Enter new details:")
+        found_contact["Name"] = input("Enter the new name:")
+        found_contact["Email"] = input("Enter the new email: ")
+        found_contact["Phone"] = input("Enter the new phone number: ")
+        print("Contact updated successfully!")
+    else:
+        print("Contact not found.")
