@@ -21,3 +21,23 @@ def add_contact():
     contact = {"Name": name, "Email": email, "Phone": phone}
     contacts.append(contact)
     print("Contact added successfully!")
+    
+#Step3: Adding Search:
+
+def search_contact():
+    search_term = input("Enter the name  or email of the contact you want to search: ")
+    found_contacts = []
+    for contact in contacts: 
+        if search_term.lower() in contact["Name"].lower() or search_term.lower() in contact["Email"].lower():
+            found_contacts.append(contact) 
+    if found_contacts:
+        print("Matching contacts found: ")
+        for contact in found_contacts: 
+            print("Name", contact["Name"])
+            print("Email", contact["Email"])
+            print("Phone", contact["Phone"])
+            print("-------------------------------")
+    else:
+        print("No matching contacts found.")
+    
+#
