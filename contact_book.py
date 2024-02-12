@@ -72,3 +72,18 @@ def delete_contact():
         
     else:
         print("Contact not found")
+
+#Step6: Display all contacts:
+
+def display_all_contacts():
+
+    if contacts:
+        print("All Contacts")
+        for contact in contacts:
+            
+            print("Name", contact["Name"])
+            print("Email", contact["Email"])
+            print("Phone", contact["Phone"])
+            print("========================")
+    else:
+        print("No contact found")
