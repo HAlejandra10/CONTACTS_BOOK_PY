@@ -59,3 +59,16 @@ def update_contact():
         print("Contact updated successfully!")
     else:
         print("Contact not found.")
+        
+#Step5: Deleting a Contact from contacts list:
+
+def delete_contact():
+    name= input("Enter the name of the contact you want to delete")
+    for contact in contacts:
+        if contact["Name"].lower() == name.lower():
+            contacts.remove(contact)
+            print("Contact deleted successfully!")
+            break
+        
+    else:
+        print("Contact not found")
